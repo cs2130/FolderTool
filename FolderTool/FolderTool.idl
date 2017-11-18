@@ -1,0 +1,34 @@
+// FolderTool.idl : FolderTool 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(FolderTool.tlb)和封送处理代码。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(5ECD9EC1-9591-438A-A16D-8DD07E87ADD4),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IRightMenu : IDispatch{
+};
+[
+	uuid(FE4F1B13-6DFB-43E2-A95B-E2AF46A2BAAF),
+	version(1.0),
+]
+library FolderToolLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(A54A1DE3-A037-4D39-BD75-CE713B1BE28D)		
+	]
+	coclass RightMenu
+	{
+		[default] interface IRightMenu;
+	};
+};
+

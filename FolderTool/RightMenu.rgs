@@ -1,0 +1,26 @@
+HKCR
+{
+	FolderTool.RightMenu.1 = s 'RightMenu Class'
+	{
+		CLSID = s '{A54A1DE3-A037-4D39-BD75-CE713B1BE28D}'
+	}
+	FolderTool.RightMenu = s 'RightMenu Class'
+	{		
+		CurVer = s 'FolderTool.RightMenu.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {A54A1DE3-A037-4D39-BD75-CE713B1BE28D} = s 'RightMenu Class'
+		{
+			ProgID = s 'FolderTool.RightMenu.1'
+			VersionIndependentProgID = s 'FolderTool.RightMenu'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{FE4F1B13-6DFB-43E2-A95B-E2AF46A2BAAF}'
+			Version = s '1.0'
+		}
+	}
+}
